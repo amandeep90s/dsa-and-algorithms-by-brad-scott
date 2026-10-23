@@ -30,3 +30,5 @@ For a simple search that checks each name one by one, the work is **O(n)** and *
 - **O(n) extra space:** Make a new list that stores one extra item for every name in the original list.
 
 **In short:** time complexity is how the work grows; space complexity is how extra memory grows. Big O notation helps describe that growth. O is the letter “O,” not the number zero.
+
+[https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
