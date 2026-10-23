@@ -8,10 +8,10 @@ In these examples, **n** means the number of names in the list.
 
 ## Common time complexities
 
-- **O(1) — constant:** The work stays about the same, even if the list gets bigger. Example: go straight to the name at a known position.
-- **O(n) — linear:** You may check each name once. If the list doubles in size, you may do about twice as much work.
-- **O(n²) — quadratic:** Each name gets compared with every other name. If the list doubles, the work may become about four times as much.
-- **O(log n) — logarithmic:** Each check cuts the remaining search in half. Example: find a name in an alphabetically sorted list by repeatedly checking the middle.
+- **O(1) — constant:** The work stays about the same, even if the list gets bigger. Example: go straight to the name at a known position. (Constant)
+- **O(n) — linear:** You may check each name once. If the list doubles in size, you may do about twice as much work. (Divide and Conquer)
+- **O(n²) — quadratic:** Each name gets compared with every other name. If the list doubles, the work may become about four times as much. (Proportial - straight line)
+- **O(log n) — logarithmic:** Each check cuts the remaining search in half. Example: find a name in an alphabetically sorted list by repeatedly checking the middle. (Loop within a loop)
 
 ## O, Ω, Θ, and little o
 
