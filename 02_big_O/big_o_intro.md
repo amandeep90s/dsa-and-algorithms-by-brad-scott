@@ -1,28 +1,32 @@
 # Big O, Time Complexity, and Space Complexity
 
-**Big O** describes how an algorithm’s resource needs grow as the amount of input grows. It helps us compare algorithms without relying on a particular computer’s speed. Big O is written with the letter **O**, not the number zero.
+Imagine searching for a name in a list. With a short list, it is quick. With a long list, it may take more work.
 
-## Time complexity
+**Time complexity** describes how the work grows as the list gets bigger. It does not tell you the exact number of seconds. **Space complexity** describes how much extra memory the algorithm needs.
 
-**Time complexity** describes how the amount of work an algorithm does grows as its input gets bigger. It doesn’t tell us the exact number of seconds; it gives us a general idea of how the work increases.
+In these examples, **n** means the number of names in the list.
 
-Imagine looking for a name in a list:
+## Common time complexities
 
-- **O(1) — constant time:** The amount of work stays about the same, no matter how large the list is. For example, looking up an item directly by its position.
-- **O(n) — linear time:** If the list gets twice as long, the work may take about twice as long. For example, checking names one by one.
-- **O(n²) — quadratic time:** If the list gets twice as long, the work may grow to about four times as much. This can happen when each item is compared with every other item.
-- **O(log n) — logarithmic time:** The work grows slowly because the problem is repeatedly cut into smaller pieces. For example, searching a sorted list by repeatedly checking the middle.
+- **O(1) — constant:** The work stays about the same, even if the list gets bigger. Example: go straight to the name at a known position.
+- **O(n) — linear:** You may check each name once. If the list doubles in size, you may do about twice as much work.
+- **O(n²) — quadratic:** Each name gets compared with every other name. If the list doubles, the work may become about four times as much.
+- **O(log n) — logarithmic:** Each check cuts the remaining search in half. Example: find a name in an alphabetically sorted list by repeatedly checking the middle.
 
-Here, **n** means the amount of input—for example, the number of names in a list.
+## O, Ω, Θ, and little o
 
-## Space complexity
+These symbols describe and compare how the work grows for large lists:
 
-**Space complexity** describes how much extra memory an algorithm needs as its input gets bigger.
+- **O (Big O):** An upper limit on how quickly the work grows. For example, checking names one by one takes **O(n)** work: the amount of work grows no faster than the size of the list.
+- **Ω (Big Omega):** A lower limit on how quickly the work grows. If you must check every name, the work is **Ω(n)**: a longer list requires at least that much checking.
+- **Θ (Big Theta):** A close match: both the upper and lower limits grow at the same rate. If you always check every name, the work is **Θ(n)**.
+- **o (little o):** The work grows more slowly than the comparison rate. For example, checking one name per list item is **o(n²)**: it grows slower than comparing every pair of names.
 
-For example, an algorithm that checks a list using only a few temporary values uses about **O(1)** extra space. An algorithm that creates a second list containing one item for every input item uses about **O(n)** extra space.
+For a simple search that checks each name one by one, the work is **O(n)** and **Ω(n)**, so it is also **Θ(n)**. It is **o(n²)** because checking one name at a time grows more slowly than comparing every pair.
 
-In short:
+## Space complexity examples
 
-- **Time complexity:** How the work grows.
-- **Space complexity:** How the extra memory grows.
-- **Big O:** A way to describe that growth.
+- **O(1) extra space:** Keep track of just the current name while searching.
+- **O(n) extra space:** Make a new list that stores one extra item for every name in the original list.
+
+**In short:** time complexity is how the work grows; space complexity is how extra memory grows. Big O notation helps describe that growth. O is the letter “O,” not the number zero.
